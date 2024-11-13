@@ -72,10 +72,11 @@ btn.addEventListener("click", () => {
 
 
   if (arr.length == 0){
+    order
   orderNo.innerText = `Select Your Favourite Food and Place Order !!`
 
   }else{
-  orderNo.innerText = `Order No : ${Math.floor(Math.random() * 1100)}`
+  orderNo.innerText = `Order ID : ${Math.floor(Math.random() * 1100)}`
 
   }
   let imgBoxRemove = document.querySelectorAll(".foods");
@@ -86,6 +87,9 @@ btn.addEventListener("click", () => {
       console.log(value);
     });
   }
+
+
+
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < foodImg.length; j++) {
       if (arr[i] == foodImg[j].name) {

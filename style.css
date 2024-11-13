@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins" , sans-serif;
+    font-family: "Poppins" , cursive;
 }
 
 body{
@@ -74,8 +74,8 @@ main{
 
 .container{
     padding:2rem;
-    width: 90%;
-    min-height: 40vh;
+    width: 70%;
+    min-height: 30vh;
     box-shadow: 0 0 30px limegreen;
     background:rgb(255, 255, 255, 0.5);
 
@@ -83,13 +83,15 @@ main{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .container h1{
     font-size: 2.3rem;
     color: black;
     text-align: center;
+    text-decoration: underline;
+    /* text-underline-offset: 7px; */
 }
 
 .container p{
@@ -110,8 +112,12 @@ main{
 
 .button:hover{
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px blueviolet;
+    box-shadow: 0 10px 20px rgb(79, 79, 79);
     transition: 0.2s ease-in-out;
+}
+
+.button-box .button:nth-child(2){
+    background-color: rgb(232, 142, 8);
 }
 
 .food-container{
@@ -153,3 +159,16 @@ main{
     transition: 0.3s ease-in-out;
     /* box-shadow: 0 0 20px rgb(50, 50, 50); */
 }
+
+/* .order-num{
+    position: absolute;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+
+   width: 220px ;
+   height:50px ;
+    
+    right: 0;
+    top: 10%;
+} */
