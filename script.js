@@ -70,13 +70,10 @@ food.forEach((element, index) => {
 
 btn.addEventListener("click", () => {
 
-
+  orderNo.innerText = `Order ID : ...`;
   if (arr.length == 0){
-    order
-  orderNo.innerText = `Select Your Favourite Food and Place Order !!`
 
-  }else{
-  orderNo.innerText = `Order ID : ${Math.floor(Math.random() * 1100)}`
+  orderNo.innerText = `Select Your Favourite Food and Place Order !!`
 
   }
   let imgBoxRemove = document.querySelectorAll(".foods");
@@ -88,20 +85,27 @@ btn.addEventListener("click", () => {
     });
   }
 
+btn.innerText ="Cooking...."
 
+for (let i = 0; i < arr.length; i++) {
+  for (let j = 0; j < foodImg.length; j++) {
+    if (arr[i] == foodImg[j].name) {
 
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < foodImg.length; j++) {
-      if (arr[i] == foodImg[j].name) {
-
-        let order = document.createElement("img");
-        order.classList.add("foods");
-        order.src = foodImg[j].img;
-        //  console.log(order);
-        imgBox.appendChild(order);
-      }
+    
+     setTimeout(() =>{
+      
+      let order = document.createElement("img");
+      order.classList.add("foods");
+      order.src = foodImg[j].img;
+      //  console.log(order);
+      imgBox.appendChild(order);
+       orderNo.innerText = `Order ID : ${Math.floor(Math.random() * 1100)}`
+        btn.innerText = "Place Order"
+     },2000)
     }
   }
+}
+
 });
 
 function clear() {}
